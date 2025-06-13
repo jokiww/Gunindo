@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>STOK UNIT STABILIZER (DEMO)</title>
+  <title>STOK UNIT STABILIZER</title>
 
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -393,7 +393,7 @@
 </head>
 <body>
   <div class="container">
-    <h2>STOK UNIT STABILIZER (DEMO)</h2>
+    <h2>STOK UNIT STABILIZER</h2>
 
     <div id="filters">
       <label for="filterTipe">Filter Tipe:</label>
@@ -432,11 +432,11 @@
     };
 
     const kategoriCols = {
-      LA: 1,
+      L: 1,
       LD: 2,
       KD: 3,
       SKD: 4,
-      KA: 5,
+      K: 5,
       DG: 6,
       SG: 7,
       SEC: 8
@@ -446,9 +446,9 @@
     // Aturan kategori untuk setiap baris - DIPERBAIKI
 // Aturan kategori untuk setiap baris - DIPERBAIKI (INDEX DITURUNKAN 1)
 const kategoriRules = {
-  12: ['LA', 'KA'], // AVR - 0,5 GS - B13 (index 12)
-  13: ['LA', 'KA'], // B14 (index 13)
-  14: ['LA', 'KA'], // B15 (index 14)
+  12: ['L', 'K'], // AVR - 0,5 GS - B13 (index 12)
+  13: ['L', 'K'], // B14 (index 13)
+  14: ['L', 'K'], // B15 (index 14)
   15: ['LD', 'SKD'], // AVR - 2 GS - B16 (index 15)
   16: ['LD', 'SKD'], // B17 (index 16)
   17: ['LD', 'SKD'], // B18 (index 17)
@@ -594,7 +594,7 @@ const kategoriRules = {
         html += `<tr><td style="padding:10px 12px; font-weight: 600;">TOTAL STOK</td><td class="${className}" style="padding:10px 12px; font-weight: 600;">${val}</td></tr>`;
       } else {
         // Tampilkan kategori sesuai urutan yang logis
-        const urutanKategori = ['LA', 'LD', 'KD', 'SKD', 'KA', 'DG', 'SG', 'SEC'];
+        const urutanKategori = ['L', 'LD', 'KD', 'SKD', 'K', 'DG', 'SG', 'SEC'];
         
         for (const kat of urutanKategori) {
           if (stokKategori[kat]) {
